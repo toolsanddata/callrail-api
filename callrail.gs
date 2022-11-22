@@ -17,7 +17,7 @@ function getCallRailData(accountId, companyId, profileId) {
   let parsedResponse = JSON.parse(response);
 
   if (responseCode == 200) {
-    numberOfResponsePages = parsedResponse["total_pages"]
+    let numberOfResponsePages = parsedResponse["total_pages"];
     let callsData = [];
 
     for (i = 1; i <= numberOfResponsePages; i++) {
